@@ -6,11 +6,42 @@
     <title>Book Library</title>
     <meta name='description' content=''>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href=''>
+    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='reset.css'>
   </head>
   <body>
+    <h1 id='title'>Book Library</h1>
+    <div id='formContainer' class='formWrapper'>
+
+        <input id='bookTitle' class='formTitle' type='text' name='bookTitle' placeholder='Title'></input><br>
+        <input id='authorName' class='formAuthor' type='text' name='authorName' placeholder='Author'></input><br>
+        <select id='bookGenre' class='formGenre' name='bookGenre'>
+          <option value='' disabled selected>Genre</option>
+          <option value='science-fiction'>Science-Fiction</option>
+          <option value='fantasy'>Fantasy</option>
+          <option value='mystery'>Mystery</option>
+          <option value='romance'>Romance</option>
+          <option value='thriller'>Thriller</option>
+          <option value='horror'>Horror</option>
+          <option value='western'>Western</option>
+          <option value='historical'>Historical</option>
+        </select>
+        <select id='haveRead' class='formRead' name='haveRead'>
+          <option value='false'>unread</option>
+          <option value='true'>read</option>
+        </select>
+        <input id='submitFormBtn' class='formBtn' type='button' value='Create'></type>
+        <input id='cancelFormBtn' class='returnBtn' type='button' value='Return'></type>
+
+      </div>
+    <div id='bookContainer'>
+      <!-- <div class='bookCard'></div> -->
+    </div>
+    <button id='addBtn'>ADD</button>
 
 
-    <script src=''></script>
+
+
+    <script src='script.js'></script>
   </body>
 </html>
