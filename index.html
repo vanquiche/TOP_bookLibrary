@@ -11,36 +11,50 @@
   </head>
   <body>
     <h1 id='title'>Book Library</h1>
+    <!--Add book card form-->
     <div id='formContainer' class='formWrapper'>
-
+      <h3 class='formText'>Add Book</h3>
         <input id='bookTitle' class='formTitle' type='text' name='bookTitle' placeholder='Title'></input><br>
         <input id='authorName' class='formAuthor' type='text' name='authorName' placeholder='Author'></input><br>
         <select id='bookGenre' class='formGenre' name='bookGenre'>
           <option value='' disabled selected>Genre</option>
-          <option value='science-fiction'>Science-Fiction</option>
-          <option value='fantasy'>Fantasy</option>
-          <option value='mystery'>Mystery</option>
-          <option value='romance'>Romance</option>
-          <option value='thriller'>Thriller</option>
-          <option value='horror'>Horror</option>
-          <option value='western'>Western</option>
-          <option value='historical'>Historical</option>
+          <option value='Science-Fiction'>Science-Fiction</option>
+          <option value='Fantasy'>Fantasy</option>
+          <option value='Mystery'>Mystery</option>
+          <option value='Romance'>Romance</option>
+          <option value='Thriller'>Thriller</option>
+          <option value='Horror'>Horror</option>
+          <option value='Western'>Western</option>
+          <option value='Historical'>Historical</option>
         </select>
         <select id='haveRead' class='formRead' name='haveRead'>
           <option value='false'>unread</option>
           <option value='true'>read</option>
         </select>
+        <input id='cancelFormBtn' class='returnBtn' type='button' value='Cancel'></type>
         <input id='submitFormBtn' class='formBtn' type='button' value='Create'></type>
-        <input id='cancelFormBtn' class='returnBtn' type='button' value='Return'></type>
-
+      </div>
+      <!--update book card form -->
+      <div id='updateFormContainer' class='updateFormWrapper'>
+        <!-- <h3 class='formText'>Update</h3>
+        <input id='updateTitle' class='formTitle' type='text' placeholder='Title'></input>
+        <input id='updateAuthor' class='formAuthor' type='text' placeholder='Author'></input>
+        <select id='updateGenre' class='updateGenre'>
+          <option value='' disabled selected>Genre</option>
+          <option value='Science-Fiction'>Science-Fiction</option>
+          <option value='Fantasy'>Fantasy</option>
+          <option value='Mystery'>Mystery</option>
+          <option value='Romance'>Romance</option>
+          <option value='Thriller'>Thriller</option>
+          <option value='Horror'>Horror</option>
+          <option value='Western'>Western</option>
+          <option value='Historical'>Historical</option>
+        </select>
+        <input id='updateBtn' class='updateBtn' type='button' value='Update'></input> -->
       </div>
     <div id='bookContainer'>
-      <!-- <div class='bookCard'></div> -->
     </div>
     <button id='addBtn'>ADD</button>
-
-
-
 
     <script src='script.js'></script>
   </body>
