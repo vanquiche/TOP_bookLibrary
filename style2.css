@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+body {
+  background-color: #F3F7F3;
+}
+#headingTitle {
+  color: black;
+  font-size: 1.7em;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #F2F7F2;
+}
+.formOpenContainer {
+  display: inline-block;
+  flex-direction: column;
+  padding: 15px;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 60px;
+  background-color: #EE6055;
+  width: 300px;
+  box-shadow: 0 2px 10px lightgray;
+  z-index: 100;
+  transition: 0.3s ease;
+}
+.close {
+  left: -285px;
+}
+#newBookForm {
+  display: grid;
+  row-gap: 5px;
+  grid-template-rows: repeat(4, auto);
+  height: 200px;
+  width: auto;
+  position: relative;
+  z-index: 99;
+}
+.formTextField {
+  height: 2em;
+  width: auto;
+  position: relative;
+}
+.sideBarTab {
+  width: 75px;
+  height: 75px;
+  background-color: #EE6055;
+  border-radius: 50%;
+  position: absolute;
+  right: -35px;
+  top: 70%;
+  transform: translate(0, -70%);
+  padding-top: 25px;
+  cursor: pointer;
+  z-index: 80;
+  padding-left: 16px;
+  transition: .3s ease;
+}
+.tabText {
+  display: inline-block;
+  color: white;
+  font-size: .8em;
+  transition: .3s ease;
+}
+.rotate {
+  transform: rotate(-90deg);
+}
+.textSpin {
+  padding-top: 35px;
+
+  transform: rotate(-90deg);
+}
+.madebyText {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  bottom: 20px;
+  color: aliceblue;
+  font-size: 0.80em;
+}
+.bookContainerShrink {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  row-gap: 2em;
+  column-gap: 10px;
+  justify-items: center;
+  align-items: top;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: auto;
+  padding-top: 3em;
+  padding: auto;
+  z-index: 80;
+  transition: 0.3s ease;
+}
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  height: 280px;
+  width: 280px;
+  background-color: #E7EFE7;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px lightgray;
+  transition: 0.3s ease;
+}
+.bookCard:hover {
+  transform: scale(108%);
+}
+.cardTitleText {
+  color: #39393A;
+  text-align: center;
+  padding-bottom: 0.75em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.cardAuthorText {
+  color: #EE6055;
+  font-size: 1.3em;
+  padding-bottom: 1em;
+}
+.cardGenreText {
+  font-size: .75em;
+  padding-bottom: 1em;
+  color: grey;
+}
+.cardDeleteBtn {
+position: absolute;
+bottom: 2em;
+border: none;
+cursor: pointer;
+background-color: transparent;
+color: lightgrey;
+}
+.cardDeleteBtn:hover {
+  color: tomato;
+}
+@media only screen and (min-width: 450px) {
+  #bookCardContainer {
+    /* background-color: green; */
+    grid-template-columns: auto;
+  }
+
+@media only screen and (min-width: 600px) {
+  #bookCardContainer {
+    /* background-color: wheat; */
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (min-width: 894px) {
+  #bookCardContainer {
+    /* background-color: violet; */
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media only screen and (min-width: 1210px) {
+  #bookCardContainer {
+    /* background-color: goldenrod; */
+    grid-template-columns: repeat(4, auto);
+  }
+}
+@media only screen and (min-width: 1780px) {
+  #bookCardContainer {
+    /* background-color: goldenrod; */
+    grid-template-columns: repeat(5, auto);
+  }
+}
