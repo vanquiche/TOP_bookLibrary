@@ -48,15 +48,16 @@ body {
   position: relative;
 }
 .sideBarTab {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 45px;
   background-color: #EE6055;
-  border-radius: 50%;
+  /* background-color: lightblue; */
+  border-radius: 10px;
   position: absolute;
-  right: -35px;
-  top: 70%;
-  transform: translate(0, -70%);
-  padding-top: 25px;
+  right: -55px;
+  bottom: 0;
+  transform: translate(0, 0%);
+  padding-top: 10px;
   cursor: pointer;
   z-index: 80;
   padding-left: 16px;
@@ -68,35 +69,29 @@ body {
   font-size: .8em;
   transition: .3s ease;
 }
-.rotate {
-  transform: rotate(-90deg);
-}
-.textSpin {
-  padding-top: 35px;
 
-  transform: rotate(-90deg);
-}
 .madebyText {
   font-family: 'Courier New', Courier, monospace;
   position: absolute;
-  bottom: 20px;
+  bottom: 16px;
   color: aliceblue;
-  font-size: 0.80em;
+  font-size: 0.70em;
 }
 .bookContainerShrink {
   display: grid;
   grid-template-columns: repeat(4, auto);
   row-gap: 2em;
-  column-gap: 10px;
   justify-items: center;
   align-items: top;
   position: absolute;
+  margin-left: 15px;
   right: 0;
   left: 0;
   top: 0;
   height: auto;
   padding-top: 3em;
-  padding: auto;
+  padding-left: 1.5em;
+  /* padding: auto; */
   z-index: 80;
   transition: 0.3s ease;
 }
@@ -175,4 +170,5 @@ color: lightgrey;
     /* background-color: goldenrod; */
     grid-template-columns: repeat(5, auto);
   }
+}
 }
