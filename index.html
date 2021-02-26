@@ -1,61 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Book Library</title>
-    <meta name='description' content=''>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='style.css'>
-    <link rel='stylesheet' href='reset.css'>
-  </head>
-  <body>
-    <h1 id='title'>My Book List</h1>
-    <!--Add book card form-->
-    <div id='formContainer' class='formWrapper'>
-      <h3 class='cardText'>Add Book</h3>
-        <input id='bookTitle' class='formTitle' type='text' name='bookTitle' placeholder='Title'></input><br>
-        <input id='authorName' class='formAuthor' type='text' name='authorName' placeholder='Author'></input><br>
-        <select id='bookGenre' class='formGenre' name='bookGenre'>
-          <option value='' disabled selected>Genre</option>
-          <option value='Science-Fiction'>Science-Fiction</option>
-          <option value='Fantasy'>Fantasy</option>
-          <option value='Mystery'>Mystery</option>
-          <option value='Romance'>Romance</option>
-          <option value='Thriller'>Thriller</option>
-          <option value='Horror'>Horror</option>
-          <option value='Western'>Western</option>
-          <option value='Historical'>Historical</option>
-        </select>
-        <select id='haveRead' class='formRead' name='haveRead'>
-          <option value='false'>unread</option>
-          <option value='true'>read</option>
-        </select>
-        <input id='cancelFormBtn' class='returnBtn' type='button' value='Cancel'></type>
-        <input id='submitFormBtn' class='formBtn' type='button' value='Create'></type>
-      </div>
-      <!--update book card form -->
-      <div id='updateFormContainer' class='updateFormWrapper'>
-        <!-- <h3 class='formText'>Update</h3>
-        <input id='updateTitle' class='formTitle' type='text' placeholder='Title'></input>
-        <input id='updateAuthor' class='formAuthor' type='text' placeholder='Author'></input>
-        <select id='updateGenre' class='updateGenre'>
-          <option value='' disabled selected>Genre</option>
-          <option value='Science-Fiction'>Science-Fiction</option>
-          <option value='Fantasy'>Fantasy</option>
-          <option value='Mystery'>Mystery</option>
-          <option value='Romance'>Romance</option>
-          <option value='Thriller'>Thriller</option>
-          <option value='Horror'>Horror</option>
-          <option value='Western'>Western</option>
-          <option value='Historical'>Historical</option>
-        </select>
-        <input id='updateBtn' class='updateBtn' type='button' value='Update'></input> -->
-      </div>
-    <div id='bookContainer'>
-    </div>
-    <button id='addBtn'>ADD</button>
 
-    <script src='script.js'></script>
-  </body>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>myBook Library</title>
+  <meta name='description' content=''>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='style2.css'>
+  <link rel='stylesheet' href='reset.css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id='formContainer' class='formOpenContainer'>
+    <h1 id='headingTitle'>myBook Library</h1>
+    <form id='newBookForm'>
+      <input id='newBookTitle' class='formTextField' type='text' placeholder='Title' required></input><br>
+      <input id='newBookAuthor' class='formTextField' type='text' placeholder='Author' required></input><br>
+      <input id='newBookGenre' class='formTextField' type='text' placeholder='Genre' required></input><br>
+      <input type='submit' id='submitFormBtn' class='btns' value='add book'></input>
+    </form>
+    <div id='pullTab' class='sideBarTab'><span id='tabHandleText' class='tabText'>close</span></div>
+    <p class='madebyText'><em>design</em>|(code) > vanquiche</p>
+  </div>
+  <div id='bookCardContainer' class='bookContainerShrink'>
+  </div>
+  <script src='script2.js'>
+  </script>
+</body>
 </html>

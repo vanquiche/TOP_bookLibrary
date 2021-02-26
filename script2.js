@@ -18,9 +18,10 @@ function Book(title, author, genre) {
   this.author = author;
   this.genre = genre;
 }
+
 // Event Listeners
 // create new book form
-submitBtn.addEventListener('submit', (event) => {
+submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
   if (!newTitle.value || !newAuthor.value || !newGenre.value) return;
   checkLibrary(newTitle.value);
@@ -46,16 +47,7 @@ pullTab.addEventListener('click', () => {
     tabHandle.innerText = 'close';
   }
 })
-// delete book card and remove object from library
-deleteBtn.addEventListener('click', (event) => {
-  for (let i = 0; i < library.length; i++) {
-    if (library[i].title == div.id) {
-      let bookIndex = library.findIndex(element => element.title == div.id);
-      removebook(bookIndex);
-      div.remove();
-    }
-  }
-});
+
 
 // verify library for duplicates
 function checkLibrary(book) {
@@ -98,8 +90,19 @@ function createDiv(book) {
   div.appendChild(author);
   div.appendChild(genre);
   div.appendChild(deleteBtn);
-}
+  // delete book card and remove object from library
+deleteBtn.addEventListener('click', () => {
+  for (let i = 0; i < library.length; i++) {
+    if (library[i].title == div.id) {
+      let bookIndex = library.findIndex(element => element.title == div.id);
+      removebook(bookIndex);
+      div.remove();
+    }
+  }
+});
 
 function removebook(index) {
   library.splice(index, 1);
 }
+}
+
